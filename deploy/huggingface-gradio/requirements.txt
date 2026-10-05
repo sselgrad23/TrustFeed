@@ -1,0 +1,8 @@
+# Free ZeroGPU Space: Whisper ASR (on GPU) + heuristic extractor. No paid tiers.
+spaces
+faster-whisper>=1.0
+pydantic>=2.0
+numpy>=1.24
+pandas>=2.0
+soundfile>=0.12
+gradio>=4.0

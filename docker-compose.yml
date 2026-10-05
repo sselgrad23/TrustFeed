@@ -1,0 +1,28 @@
+# Full-stack local deployment: two services behind a single browser origin.
+#   - api:      FastAPI service (Whisper ASR + heuristic extractor by default)
+#   - frontend: React console served by nginx, reverse-proxying /api -> api:8000
+#
+# The API defaults to the heuristic extractor so it runs on CPU with no model
+# download. To use the local LLM, run on a GPU host with the [llm] extras and set
+# TRUSTFEED_LLM_BACKEND=transformers.
+services:
+  api:
+    build: .
+    image: trustfeed-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+    environment:
+      TRUSTFEED_LLM_BACKEND: "heuristic"
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    image: trustfeed-frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+    restart: unless-stopped

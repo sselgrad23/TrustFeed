@@ -1,0 +1,17 @@
+.git
+.venv
+venv
+frontend/node_modules
+frontend/dist
+data
+models
+reports
+mlruns
+mlflow.db
+legacy
+**/__pycache__
+*.pyc
+.pytest_cache
+.mypy_cache
+.ruff_cache
+*.local.md

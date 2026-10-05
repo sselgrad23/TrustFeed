@@ -1,0 +1,29 @@
+{
+  "description": "Hand-labelled clip-selection gold set. For each sample, gold_clips are the transcript spans a newsroom editor would plausibly clip for social distribution (concrete events, casualties, sports results, direct quotes, research findings). The remaining sentences are encyclopedic/trivia distractors. Spans are in seconds against the sample's reference-segment timeline. Labelled by the author; small by design and honest about it.",
+  "overlap_fraction": 0.5,
+  "items": [
+    {
+      "sample": "fleurs_fr_fr",
+      "language": "fr",
+      "audio": "data/samples/fleurs_fr_fr.wav",
+      "gold_clips": [
+        {"start": 10.6, "end": 34.0, "note": "USOC official statement on athletes' interests"},
+        {"start": 34.4, "end": 42.7, "note": "direct quote on obligations and development"},
+        {"start": 53.7, "end": 62.0, "note": "airliner runway excursion in Mashhad, 17 killed"},
+        {"start": 62.4, "end": 69.6, "note": "Fisichella loses control, out of the race"},
+        {"start": 70.0, "end": 78.4, "note": "Del Potro forced to a tie-break at 6-6"},
+        {"start": 90.9, "end": 98.5, "note": "researchers: compounds form kidney-blocking crystals"}
+      ]
+    },
+    {
+      "sample": "fleurs_de_de",
+      "language": "de",
+      "audio": "data/samples/fleurs_de_de.wav",
+      "gold_clips": [
+        {"start": 86.3, "end": 105.9, "note": "dam built 1963; seasonal flooding that carried sediment"},
+        {"start": 106.3, "end": 117.4, "note": "claim: micro-expressions reveal whether someone is lying"},
+        {"start": 169.1, "end": 186.0, "note": "FAA claims NextGen would allow shorter flight routes"}
+      ]
+    }
+  ]
+}

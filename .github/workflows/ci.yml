@@ -1,0 +1,52 @@
+# Continuous integration. Runs free on GitHub-hosted runners for public repos.
+# Gate: lint -> type-check -> tests (heuristic backend, no GPU), plus a frontend
+# build and Docker image builds.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: pip install -e ".[dev,eval]"
+      - name: Lint (ruff)
+        run: ruff check src tests
+      - name: Type-check (mypy)
+        run: mypy src
+      - name: Tests (pytest)
+        run: pytest -q
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Install & build
+        run: |
+          npm install
+          npm run build
+
+  docker:
+    runs-on: ubuntu-latest
+    needs: [backend, frontend]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build API image
+        run: docker build -t trustfeed-api .
+      - name: Build frontend image
+        run: docker build -t trustfeed-frontend ./frontend

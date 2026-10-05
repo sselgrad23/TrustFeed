@@ -6,7 +6,7 @@
         "content": "## Google Spreadsheet URL: [here](https://docs.google.com/spreadsheets/d/13B9XiYbZGCJZ3MkeGqq0uaVT7TBUpFixy-tz53ZQJDU/edit#gid=0)",
         "width": 264
       },
-      "id": "c6850764-371c-4863-821e-2ff85f3cf24a",
+      "id": "REDACTED",
       "name": "Sticky Note",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
@@ -75,7 +75,7 @@
         },
         "options": {}
       },
-      "id": "02d33481-de8d-4d15-aa2e-2bbf083ba8a9",
+      "id": "REDACTED",
       "name": "Google Sheets1",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.3,
@@ -85,7 +85,7 @@
       ],
       "credentials": {
         "googleApi": {
-          "id": "0J99xgTBby2C5nhu",
+          "id": "REDACTED",
           "name": "Google Service Account account"
         }
       }
@@ -110,7 +110,7 @@
         "startIndex": 2,
         "rowsToDelete": 100
       },
-      "id": "610d2136-c13b-4c5f-833c-aa480a24099b",
+      "id": "REDACTED",
       "name": "Google Sheets2",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.3,
@@ -120,7 +120,7 @@
       ],
       "credentials": {
         "googleApi": {
-          "id": "0J99xgTBby2C5nhu",
+          "id": "REDACTED",
           "name": "Google Service Account account"
         }
       }
@@ -134,7 +134,7 @@
           "parameters": [
             {
               "name": "Authorization",
-              "value": "Bearer MYsnFsXBgUmBSYo5zQiNMeXosq2ffyFlfOSSADW1miU"
+              "value": "Bearer REDACTED"
             }
           ]
         },
@@ -143,7 +143,7 @@
         "body": "={   \"messages\": [     {       \"content\":  {{ JSON.stringify($json[\"Transcripts\"]) }}, \"type\": \"human\" }   ],   \"model\": \"string\",   \"max_tokens\": 0,   \"temperature\": 0,   \"top_p\": 0,   \"frequency_penalty\": 0,   \"presence_penalty\": 0,   \"stop\": \"string\",   \"stream\": false } ",
         "options": {}
       },
-      "id": "56054568-f00a-401e-ad69-9759fe987db3",
+      "id": "REDACTED",
       "name": "Argo Summarize Bot",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
@@ -161,7 +161,7 @@
           "parameters": [
             {
               "name": "Authorization",
-              "value": "Bearer QHaCtPebIYifJoQvbMkF8XGFeQ53QeTCQ6btyuJAD64"
+              "value": "Bearer REDACTED"
             }
           ]
         },
@@ -171,7 +171,7 @@
         "body": "={   \"messages\": [     {       \"content\":  {{ JSON.stringify($json.choices[0].message.content) }}, \"type\": \"human\" }   ],   \"model\": \"string\",   \"max_tokens\": 0,   \"temperature\": 0,   \"top_p\": 0,   \"frequency_penalty\": 0,   \"presence_penalty\": 0,   \"stop\": \"string\",   \"stream\": false } ",
         "options": {}
       },
-      "id": "c7164fdc-494b-4ced-8056-977704c26957",
+      "id": "REDACTED",
       "name": "Argo Question Agent",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
@@ -219,7 +219,7 @@
         },
         "options": {}
       },
-      "id": "c609412d-8d97-4c00-8df5-e4ed843996cd",
+      "id": "REDACTED",
       "name": "Google Sheets4",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.3,
@@ -229,7 +229,7 @@
       ],
       "credentials": {
         "googleApi": {
-          "id": "0J99xgTBby2C5nhu",
+          "id": "REDACTED",
           "name": "Google Service Account account"
         }
       }
@@ -240,7 +240,7 @@
         "combinationMode": "mergeByPosition",
         "options": {}
       },
-      "id": "1b6974f4-93e4-40bf-bd5f-71c2a2a99d70",
+      "id": "REDACTED",
       "name": "Merge",
       "type": "n8n-nodes-base.merge",
       "typeVersion": 2.1,
@@ -261,7 +261,7 @@
         },
         "additionalOptions": {}
       },
-      "id": "1a2cc15d-753e-443d-83ad-a48d6f54df0b",
+      "id": "REDACTED",
       "name": "Rename Keys",
       "type": "n8n-nodes-base.renameKeys",
       "typeVersion": 1,
@@ -282,7 +282,7 @@
         },
         "additionalOptions": {}
       },
-      "id": "22436c87-f163-47e9-82f5-fa8f81afdf56",
+      "id": "REDACTED",
       "name": "Rename Keys1",
       "type": "n8n-nodes-base.renameKeys",
       "typeVersion": 1,
@@ -300,7 +300,7 @@
           "parameters": [
             {
               "name": "Authorization",
-              "value": "Bearer 9t7MrCX8slivZKW_p_to-uW3YiSTyluVbGOnhbNjevA"
+              "value": "Bearer REDACTED"
             }
           ]
         },
@@ -310,7 +310,7 @@
         "body": "={   \"messages\": [     {       \"content\":  {{ JSON.stringify($json.text) }}, \"type\": \"human\" }   ],   \"model\": \"string\",   \"max_tokens\": 0,   \"temperature\": 0,   \"top_p\": 0,   \"frequency_penalty\": 0,   \"presence_penalty\": 0,   \"stop\": \"string\",   \"stream\": false } ",
         "options": {}
       },
-      "id": "2716b26c-b033-4fb6-9632-12225c4713f6",
+      "id": "REDACTED",
       "name": "Argo Bullentpints Agent",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.1,
@@ -339,7 +339,7 @@
         "startIndex": 2,
         "rowsToDelete": 100
       },
-      "id": "ce51161d-0250-41db-ac30-b16f8efae812",
+      "id": "REDACTED",
       "name": "Google Sheets3",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.3,
@@ -349,7 +349,7 @@
       ],
       "credentials": {
         "googleApi": {
-          "id": "0J99xgTBby2C5nhu",
+          "id": "REDACTED",
           "name": "Google Service Account account"
         }
       }
@@ -359,7 +359,7 @@
         "operation": "send",
         "additionalFields": {}
       },
-      "id": "ccf5a217-7196-483d-b17c-7af84d00c231",
+      "id": "REDACTED",
       "name": "WhatsApp Business Cloud",
       "type": "n8n-nodes-base.whatsApp",
       "typeVersion": 1,
@@ -372,7 +372,7 @@
       "parameters": {
         "options": {}
       },
-      "id": "2db39892-ece4-445e-a0ad-3d57e83a23d1",
+      "id": "REDACTED",
       "name": "Facebook Graph API",
       "type": "n8n-nodes-base.facebookGraphApi",
       "typeVersion": 1,
@@ -398,7 +398,7 @@
         },
         "options": {}
       },
-      "id": "ec7e5ab3-75d3-43ff-b694-862f16eafaaa",
+      "id": "REDACTED",
       "name": "Transcripts",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.3,
@@ -409,7 +409,7 @@
       "alwaysOutputData": true,
       "credentials": {
         "googleApi": {
-          "id": "0J99xgTBby2C5nhu",
+          "id": "REDACTED",
           "name": "Google Service Account account"
         }
       }
@@ -418,7 +418,7 @@
       "parameters": {
         "options": {}
       },
-      "id": "a614c281-be89-4733-8524-23d89caf20ce",
+      "id": "REDACTED",
       "name": "Human Validation",
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.3,
@@ -433,14 +433,14 @@
         "operation": "download",
         "fileId": {
           "__rl": true,
-          "value": "1Y6mguKA5NnKUrIP5ULTt9hpSN0tEu_Xf",
+          "value": "REDACTED",
           "mode": "list",
           "cachedResultName": "chpped.mp3",
           "cachedResultUrl": "https://drive.google.com/file/d/1Y6mguKA5NnKUrIP5ULTt9hpSN0tEu_Xf/view?usp=drivesdk"
         },
         "options": {}
       },
-      "id": "fa24051b-1baf-4e9a-804c-62dae2da4dc8",
+      "id": "REDACTED",
       "name": "Google Drive1",
       "type": "n8n-nodes-base.googleDrive",
       "typeVersion": 3,
@@ -450,14 +450,14 @@
       ],
       "credentials": {
         "googleApi": {
-          "id": "0J99xgTBby2C5nhu",
+          "id": "REDACTED",
           "name": "Google Service Account account"
         }
       }
     },
     {
       "parameters": {},
-      "id": "57da0900-0904-4422-8623-36820cdb3d1b",
+      "id": "REDACTED",
       "name": "When clicking \"Test workflow\"",
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
@@ -505,7 +505,7 @@
         },
         "options": {}
       },
-      "id": "a8b9bb82-68d5-4d55-91ef-3f315ecedc89",
+      "id": "REDACTED",
       "name": "Google Sheets",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.3,
@@ -515,7 +515,7 @@
       ],
       "credentials": {
         "googleApi": {
-          "id": "0J99xgTBby2C5nhu",
+          "id": "REDACTED",
           "name": "Google Service Account account"
         }
       }
@@ -540,7 +540,7 @@
         "startIndex": 2,
         "rowsToDelete": 100
       },
-      "id": "6aa8e2d5-f59a-4f01-9f66-5fac0c6acbff",
+      "id": "REDACTED",
       "name": "Google Sheets5",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.3,
@@ -550,7 +550,7 @@
       ],
       "credentials": {
         "googleApi": {
-          "id": "0J99xgTBby2C5nhu",
+          "id": "REDACTED",
           "name": "Google Service Account account"
         }
       }
@@ -563,7 +563,7 @@
           "language": "fr"
         }
       },
-      "id": "a4ff4ab9-a05c-42a1-a923-7babaa6e19e5",
+      "id": "REDACTED",
       "name": "OpenAI",
       "type": "@n8n/n8n-nodes-langchain.openAi",
       "typeVersion": 1.1,
@@ -573,7 +573,7 @@
       ],
       "credentials": {
         "openAiApi": {
-          "id": "JAmvmTME8pusn28B",
+          "id": "REDACTED",
           "name": "OpenAi account"
         }
       }
@@ -748,6 +748,6 @@
     "templateCredsSetupCompleted": true,
     "instanceId": "5829908d3204e024085e1502a280dc27042e1ff7c6a12a33f7085587ed924acd"
   },
-  "id": "FKsl6XqgeOoiCnu4",
+  "id": "REDACTED",
   "tags": []
 }
